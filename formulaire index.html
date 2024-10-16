@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande d'adhésion</title>
+    <link rel="stylesheet" href="formulaire.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Demande d'adhésion</h1>
+        <form id="adhesionForm">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+
+            <label for="adresse">Adresse :</label>
+            <textarea id="adresse" name="adresse" rows="4" required></textarea>
+
+            <label for="dateNaissance">Date de naissance :</label>
+            <input type="date" id="dateNaissance" name="dateNaissance" required>
+
+            <input type="submit" value="Envoyer la demande">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('adhesionForm').onsubmit = function(event) {
+            event.preventDefault();
+            alert('Votre demande a été soumise avec succès !');
+        };
+    </script>
+</body>
+</html>
